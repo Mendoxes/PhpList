@@ -1,0 +1,16 @@
+.cardM{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.delete-checkbox{
+margin-left: -14rem;
+    position: relative;
+}
+
+.each_card{
+
+    margin:2rem;
+}
