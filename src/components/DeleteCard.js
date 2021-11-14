@@ -57,7 +57,7 @@ useEffect(() => {
 
     return (
         <div>
-             <button onClick={deleteMe}>Delete Button</button>
+             <button onClick={deleteMe}>MASS DELETE</button>
              {state.val}
         </div>
     )

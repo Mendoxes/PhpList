@@ -58,7 +58,7 @@ console.log(ok)
     return (
         <div>
           <DeleteCard prop={ok}/>
-         <a href="add">Add</a>
+         <a href="add">ADD</a>
           <div className="cardM" >
           <Ok ></Ok></div>
             
