@@ -14,7 +14,7 @@ const [state,setState] =useState({val:""})
 
 function deleteMe(e){
 
-    // window.location.reload(false);
+    window.location.reload(false);
 
         
         setState({
