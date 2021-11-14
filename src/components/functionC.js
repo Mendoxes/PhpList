@@ -151,14 +151,14 @@ useEffect(() => {
            
             <form >
                 {post}
-                <input onChange={handleSku} placeholder="sku" required></input>
-                <input onChange={handleCost} placeholder="Price" required></input>
-                <input onChange={handleName} placeholder="Name" required></input>
-            {!!propx[1]&&<input onChange={handleHeightChange} required placeholder={propx[2]}></input>}
-            {!!propx[1]&&<input onChange={handleWidthChange} required placeholder={propx[3]}></input>}
-            {!!propx[1]&&<input onChange={handleLengthChange} required placeholder={propx[4]}></input>}
-            {propx[0]=="Dvd"?<input onChange={handleSizeChange} required placeholder={propx[2]}></input>:null}
-            {propx[0]=="Book"?<input onChange={handleWeightChange} required placeholder={propx[2]}></input>:null}
+                <input onChange={handleSku} placeholder="sku" id="sku" required></input>
+                <input onChange={handleCost} placeholder="Price" id="price" required></input>
+                <input onChange={handleName} placeholder="Name" id="name" required></input>
+            {!!propx[1]&&<input onChange={handleHeightChange} id="height" required placeholder={propx[2]}></input>}
+            {!!propx[1]&&<input onChange={handleWidthChange}  id="width" required placeholder={propx[3]}></input>}
+            {!!propx[1]&&<input onChange={handleLengthChange} id="length" required placeholder={propx[4]}></input>}
+            {propx[0]=="Dvd"?<input onChange={handleSizeChange} id="size" required placeholder={propx[2]}></input>:null}
+            {propx[0]=="Book"?<input onChange={handleWeightChange} id="weight" required placeholder={propx[2]}></input>:null}
             <button onClick={createPost} > Save</button>
             
             </form>
