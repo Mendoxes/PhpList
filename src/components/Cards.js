@@ -68,7 +68,7 @@ console.log(ok)
 
          {isTabletOrMobile&&<div className="buttons_container">
           <DeleteCard prop={ok}/>
-         <a href="add"><Button  variant="success" size="sl">ADD</Button></a>
+         <a href="add"><Button  variant="success" size="sm">ADD</Button></a>
          </div>}
          
          </div>
