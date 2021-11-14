@@ -242,12 +242,12 @@ return(
 
 
 <div>
-<form>
+<form id="product_form">
 <select onChange={this.handleAdd3} id="productType">
 <option disabled selected value >Please select product</option>
-  <option value="Book">Book</option>
-  <option value="Dvd">Dvd</option>
-  <option value="Furniture">Furniture</option>
+  <option id="Book" value="Book">Book</option>
+  <option id="DVD" value="Dvd">Dvd</option>
+  <option id="Furniture" value="Furniture">Furniture</option>
 
 </select>
 
