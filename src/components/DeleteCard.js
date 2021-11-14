@@ -60,7 +60,7 @@ useEffect(() => {
     return (
         <div>
         {!isTabletOrMobile&&<Button style={{paddingLeft:"2rem",paddingRight:"2rem"}} variant="danger" size="lg" onClick={deleteMe}>MASS DELETE</Button>}
-        {isTabletOrMobile&&<Button style={{fontSize:"0.5rem",padding:0}}  variant="danger" size="sm" onClick={deleteMe}>MASS DELETE</Button>}   
+        {isTabletOrMobile&&<Button style={{fontSize:"0.6rem",padding:0}}  variant="danger" size="sm" onClick={deleteMe}>MASS DELETE</Button>}   
         </div>
     )
 }
