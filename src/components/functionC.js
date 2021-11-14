@@ -1,6 +1,7 @@
 
 import React,{useState,useEffect} from 'react'
 import axios from "axios"
+import {Form,FloatingLabel,Button} from "react-bootstrap"
 // import { useHistory } from "react-router-dom";
 
 export default function FunctionC({propx,propxx,propText,propNur,propSku}) {
@@ -15,11 +16,16 @@ const [type,setType]=useState("")
 const [post,setPost]=useState("")
 const [cost,setCost]=useState("")
 const [name,setName]=useState("")
+const [validation,setValidation]=useState(true)
 
-// useEffect(() => {
-// setState(propSku)
 
-// }, [propSku])
+
+
+useEffect(() => {
+    if(propx){
+  setValidation(false)}
+  else {setValidation(true)}
+}, [propx])
 
 
 
@@ -102,14 +108,11 @@ function handleWidthChange(e){
                 }
 
 
-// console.log(propx[1])
-// console.log(propText)
-// console.log(propSku);
-// console.log(propNur)
+
 
 function createPost(e) {
     e.preventDefault();
-
+ 
     let formData = new FormData();
 
 //width
@@ -151,22 +154,79 @@ useEffect(() => {
            
             <form >
                 {post}
-                <input onChange={handleSku} placeholder="sku" id="sku" required></input>
-                <input onChange={handleCost} placeholder="Price" id="price" required></input>
-                <input onChange={handleName} placeholder="Name" id="name" required></input>
-            {!!propx[1]&&<input onChange={handleHeightChange} id="height" required placeholder={propx[2]}></input>}
-            {!!propx[1]&&<input onChange={handleWidthChange}  id="width" required placeholder={propx[3]}></input>}
-            {!!propx[1]&&<input onChange={handleLengthChange} id="length" required placeholder={propx[4]}></input>}
-            {propx[0]=="Dvd"?<input onChange={handleSizeChange} id="size" required placeholder={propx[2]}></input>:null}
-            {propx[0]=="Book"?<input onChange={handleWeightChange} id="weight" required placeholder={propx[2]}></input>:null}
-            <button onClick={createPost} > Save</button>
-            
+                <FloatingLabel
+    
+    label="Sku"
+    className="mb-2"
+  >
+    <Form.Control onChange={handleSku} placeholder="sku" id="sku" required />
+    </FloatingLabel>
+    <FloatingLabel
+    
+    label="Price"
+    className="mb-3"
+  >
+    <Form.Control onChange={handleCost} placeholder="Price" id="price" required />
+    </FloatingLabel>
+    <FloatingLabel
+    
+    label="Name"
+    className="mb-3"
+  >
+    <Form.Control onChange={handleName} placeholder="Name" id="name" required/>
+  </FloatingLabel>
+
+
+
+  {!!propx[1]&&<FloatingLabel
+    
+    label="Height(cm)"
+    className="mb-3"
+  >
+    <Form.Control onChange={handleHeightChange} id="height" required placeholder={propx[2]}/>
+  </FloatingLabel>}
+
+  {!!propx[1]&&<FloatingLabel
+    
+    label="Width(cm)"
+    className="mb-3"
+  >
+    <Form.Control onChange={handleWidthChange}  id="width" required placeholder={propx[3]}/>
+  </FloatingLabel>}
+
+  {!!propx[1]&&<FloatingLabel
+    
+    label="Length(cm)"
+    className="mb-3"
+  >
+    <Form.Control onChange={handleLengthChange} id="length" required placeholder={propx[4]}/>
+  </FloatingLabel>}
+
+  {propx[0]=="Dvd"?<FloatingLabel
+    
+    label="Size(MB)"
+    className="mb-3"
+  >
+    <Form.Control onChange={handleSizeChange} id="size" required placeholder={propx[2]}/>
+  </FloatingLabel>:null}
+
+
+  {propx[0]=="Book"?<FloatingLabel
+    
+    label="Weight(kg)"
+    className="mb-3"
+  >
+    <Form.Control onChange={handleWeightChange} id="weight" required placeholder={propx[2]}/>
+  </FloatingLabel>:null}
+          
+          
+        
+            <Button disabled={validation} size="lg" variant="outline-success" onClick={createPost} > Save</Button>
+            <a href="/"> <Button variant="outline-danger" size="lg">Back</Button></a>
             </form>
-           <a href="/"> <button >Back</button></a>
-  {/* {state}
-  Height: {height}
-  Width: {width}
-  Length: {length} */}
+           
+    
         </div>
     )
 }
+

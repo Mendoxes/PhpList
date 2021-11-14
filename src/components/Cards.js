@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Card,ListGroup} from "react-bootstrap"
+import {Card,ListGroup,Button} from "react-bootstrap"
 import "./cards.css"
 import DeleteCard from "./DeleteCard.js"
 import {
@@ -56,9 +56,17 @@ console.log(ok)
 
 
     return (
-        <div>
+        <div >
+          <div className="header">
+            <h1 class="header_text">Product List</h1>
+          <div className="buttons_container">
           <DeleteCard prop={ok}/>
-         <a href="add">ADD</a>
+         <a href="add"><Button style={{paddingLeft:"2rem",paddingRight:"2rem",marginRight:"1rem"}} variant="success" size="lg">ADD</Button></a>
+         </div></div>
+         <hr/>
+
+
+
           <div className="cardM" >
           <Ok ></Ok></div>
             

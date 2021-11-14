@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useCallback,useEffect } from 'react';
 import axios from "axios";
-
+import {Button} from "react-bootstrap"
 export default function DeleteCard({prop}) {
 
 
@@ -56,10 +56,10 @@ useEffect(() => {
 
 
     return (
-        <div>
-             <button onClick={deleteMe}>MASS DELETE</button>
-             {state.val}
-        </div>
+        
+             <Button style={{paddingLeft:"2rem",paddingRight:"2rem"}} variant="danger" size="lg" onClick={deleteMe}>MASS DELETE</Button>
+             
+        
     )
 }
 

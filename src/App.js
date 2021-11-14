@@ -9,6 +9,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import Footer from "./components/footer.js"
 
 function App() {
 
@@ -64,7 +65,7 @@ console.log(state)
 
 
 
-
+<Footer></Footer>
 
 
 </div>
