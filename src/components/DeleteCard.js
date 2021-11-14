@@ -14,7 +14,7 @@ const [state,setState] =useState({val:""})
 
 function deleteMe(e){
 
-    window.location.reload(false);
+    // window.location.reload(false);
 
         
         setState({
@@ -36,7 +36,7 @@ useEffect(() => {
     prop);
     console.log(state)
     console.log(formData)
-    const url = "http://localhost/testPHP/newIndex.php";
+    const url = "https://phpproduct.herokuapp.com/newIndex.php";
     console.log(formData)
     // for (var key of formData.entries()) {
     //     console.log(key[0] + ', ' + key[1]);

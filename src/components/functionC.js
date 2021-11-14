@@ -126,7 +126,7 @@ formData.append("size",size);
 formData.append("weight",weight);
 
     axios
-      .post("http://localhost/testPHP/IndexEnd.php", formData)
+      .post("https://phpproduct.herokuapp.com/indexEnd.php", formData)
       .then((response) => {
         //   console.log(response)
         setPost(response.data);

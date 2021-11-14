@@ -44,7 +44,7 @@ console.log(ok)
         <ListGroup.Item>{state[i].sku}</ListGroup.Item>
         <ListGroup.Item>{state[i].name}</ListGroup.Item>
         <ListGroup.Item>{state[i].price}$</ListGroup.Item>
-        <ListGroup.Item>{state[i].attributes}</ListGroup.Item>
+        <ListGroup.Item>{state[i].attrubutes}</ListGroup.Item>
         
       </ListGroup>
     </Card></div>)

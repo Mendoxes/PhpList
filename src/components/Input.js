@@ -81,7 +81,7 @@ handleAdd3 = async e =>{
         attr: e.target.value,
         attrCheck: e.target.value
     })
-    const url = "http://localhost/testPHP/newIndex.php";
+    const url = "https://phpproduct.herokuapp.com/newIndex.php";
     let formData = new FormData();
     
     formData.append("atrrCheck",

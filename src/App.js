@@ -23,7 +23,7 @@ function App() {
 ; 
   const fetchData2 = useCallback(async ()=>
 {
-    const result3 = await axios.get(`http://localhost/testPHP/index.php`);
+    const result3 = await axios.get(`https://phpproduct.herokuapp.com/index.php`);
 
     console.log(result3.data)
 setState(result3.data)
