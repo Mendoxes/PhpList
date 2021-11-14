@@ -38,7 +38,7 @@ console.log(ok)
           <Card   style={{ width: '18rem' }}>
       <Card.Header><input onClick={(e) => {
                                 selectCheck(e);
-                            }} className="delete-checkbox"   type="checkbox" id={state[i].sku} name="scales"
+                            }}   type="checkbox" id={state[i].sku} name="scales"
          ></input>  </Card.Header>
       <ListGroup variant="flush">
         <ListGroup.Item>{state[i].sku}</ListGroup.Item>
