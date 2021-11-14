@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {Card,ListGroup,Button} from "react-bootstrap"
 import "./cards.css"
 import DeleteCard from "./DeleteCard.js"
+import { useMediaQuery } from 'react-responsive'
 import {
   BrowserRouter,
   Routes,
@@ -11,6 +12,7 @@ import {
 export default function Cards({state}) {
 const [arr,setArr]=useState([]);
 
+const isTabletOrMobile = useMediaQuery({ query: '(max-width: 600px)' })
 let ok = []
 
   const selectCheck = (e) => {
@@ -59,10 +61,17 @@ console.log(ok)
         <div >
           <div className="header">
             <h1 class="header_text">Product List</h1>
-          <div className="buttons_container">
+            {!isTabletOrMobile&&<div className="buttons_container">
           <DeleteCard prop={ok}/>
          <a href="add"><Button style={{paddingLeft:"2rem",paddingRight:"2rem",marginRight:"1rem"}} variant="success" size="lg">ADD</Button></a>
-         </div></div>
+         </div>}
+
+         {isTabletOrMobile&&<div className="buttons_container">
+          <DeleteCard prop={ok}/>
+         <a href="add"><Button  variant="success" size="sl">ADD</Button></a>
+         </div>}
+         
+         </div>
          <hr/>
 
 

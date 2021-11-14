@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { useCallback,useEffect } from 'react';
 import axios from "axios";
 import {Button} from "react-bootstrap"
+import { useMediaQuery } from 'react-responsive'
+
 export default function DeleteCard({prop}) {
 
 
@@ -11,7 +13,7 @@ export default function DeleteCard({prop}) {
 
 const [state,setState] =useState({val:""})
 
-
+const isTabletOrMobile = useMediaQuery({ query: '(max-width: 600px)' })
 function deleteMe(e){
 
     window.location.reload(false);
@@ -56,10 +58,10 @@ useEffect(() => {
 
 
     return (
-        
-             <Button style={{paddingLeft:"2rem",paddingRight:"2rem"}} variant="danger" size="lg" onClick={deleteMe}>MASS DELETE</Button>
-             
-        
+        <div>
+        {!isTabletOrMobile&&<Button style={{paddingLeft:"2rem",paddingRight:"2rem"}} variant="danger" size="lg" onClick={deleteMe}>MASS DELETE</Button>}
+        {isTabletOrMobile&&<Button  variant="danger" size="sm" onClick={deleteMe}>MASS DELETE</Button>}   
+        </div>
     )
 }
 
