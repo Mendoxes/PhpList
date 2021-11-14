@@ -19,14 +19,15 @@ function App() {
 
 
 
-  const [state,setState]=useState([1,2])
+  const [state,setState]=useState([])
 ; 
   const fetchData2 = useCallback(async ()=>
 {
     const result3 = await axios.get(`https://phpproduct.herokuapp.com/index.php`);
 
     console.log(result3.data)
-setState(result3.data)
+    if(result3.data){
+setState(result3.data)}
 })
 
 
@@ -36,7 +37,7 @@ fetchData2()
 
 
 
-
+console.log(state)
 
 
   return (
@@ -54,7 +55,7 @@ fetchData2()
       <Route path="Add" element={<Input />} />
      
     </Routes>
-  </BrowserRouter>,
+  </BrowserRouter>
     
  
 
